@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="A boolean function to determine if an array is sorted.">
+    <meta name="author" content="https://github.com/lautomator">
+    <title>Is Sorted?</title>
+    <style>
+        body { font-family: "Monaco", sans-serif; }
+
+        .container {
+            height: auto;
+            margin: 0 auto;
+            overflow: hidden;
+            width: 600px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            width: 100%;
+        }
+
+        td {
+            border: 1px dotted #000;
+            height: auto;
+            padding: 5px;
+            vertical-align: top;
+            width: 300px;
+        }
+
+        @media (max-width:768px) {
+            .container {
+                width: 100%;
+            }
+
+            td {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Is it sorted?</h2>
+        <h3>Array Information</h3>
+        <table>
+            <tr>
+                <td>array: </td>
+                <td><em><span class="array">empty</span></em></td>
+            </tr>
+            <tr>
+                <td>array length: </td>
+                <td><em><span class="array-length">0</span></em></td>
+            </tr>
+            <tr>
+                <td>is sorted: </td>
+                <td><em><span id="solution">not sorted</span></em></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        var data = {
+            targets: {
+                body: document.getElementsByTagName("body"),
+                arrayEl: document.getElementsByClassName("array"),
+                arrayLenEl: document.getElementsByClassName("array-length"),
+                solEl: document.getElementById("solution")
+            },
+            scriptName: "main.js",
+            v: Math.random(0, 1000) * 1000,
+            script: document.createElement("script")
+        };
+        // enqueue the script
+        data.script.src = data.scriptName + "?v=" + data.v.toString().replace(".", "");
+        data.targets.body[0].appendChild(data.script);
+    </script>
+</body>
+</html>
